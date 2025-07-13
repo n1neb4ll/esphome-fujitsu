@@ -1,6 +1,6 @@
 /* This file is based on unreality's FujiHeatPump project */
 
-// #define DEBUG_FUJI
+#define DEBUG_FUJI
 #include "FujiHeatPump.h"
 
 // The esphome ESP_LOGx macros expand to reference esp_log_printf_, but do so
