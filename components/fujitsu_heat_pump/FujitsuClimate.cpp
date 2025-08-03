@@ -39,7 +39,7 @@ void FujitsuClimate::setup() {
     this->heatPump.connect(&Serial2, !this->is_master_, rx, tx);
     ESP_LOGD("fuji", "starting task");
     xTaskCreatePinnedToCore(serialTask, "FujiTask", 10000, (void *)this,
-                            configMAX_PRIORITIES - 1, &(this->taskHandle), tskNO_AFFINITY);
+                            configMAX_PRIORITIES - 1, &(this->taskHandle), 0);
 }
 
 optional<climate::ClimateMode> FujitsuClimate::fujiToEspMode(
